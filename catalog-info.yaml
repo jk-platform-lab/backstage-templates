@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: lab-templates
+  description: All software templates in jk-platform-lab/backstage-templates
+spec:
+  targets:
+    - ./starter-component/template.yaml
+    - ./platform-service/template.yaml

@@ -1,0 +1,9 @@
+# Ranges already in use in the company. New VPCs must not overlap them.
+# name                 cidr
+platform-prod          10.0.0.0/16
+platform-staging       10.1.0.0/16
+platform-dev           10.2.0.0/16
+platform-sandbox       10.3.0.0/16
+shared-services        10.10.0.0/16
+data-team-account      10.20.0.0/16
+office-vpn             192.168.0.0/16

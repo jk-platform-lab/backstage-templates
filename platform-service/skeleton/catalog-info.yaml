@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name }}
+  description: ${{ values.description }}
+  annotations:
+    github.com/project-slug: ${{ values.repoOwner }}/${{ values.repoName }}
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - terraform
+    - ${{ values.environment }}
+spec:
+  type: service
+  lifecycle: experimental
+  owner: ${{ values.owner }}
+  dependsOn:
+    - component:infradoctor

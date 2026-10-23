@@ -1,0 +1,21 @@
+name: Platform audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  network:
+    name: Network (VPC overlaps)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check VPC ranges in Terraform
+        uses: JayKearney/infradoctor@v1
+        with:
+          args: network check terraform/ --known terraform/known-ranges.txt
