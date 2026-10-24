@@ -94,6 +94,24 @@ spec:
         description: ${{ parameters.description }}
         defaultBranch: main
         repoVisibility: public
+        gitCommitMessage: Initial commit from the Platform service template
+        topics:
+          - terraform
+          - platform-service
+          - ${{ parameters.environment }}
+        hasWiki: false
+        hasProjects: false
+        deleteBranchOnMerge: true
+        allowMergeCommit: false
+        allowRebaseMerge: false
+        allowSquashMerge: true
+        protectDefaultBranch: true
+        protectEnforceAdmins: false
+        requiredApprovingReviewCount: 0
+        requiredStatusCheckContexts:
+          - Network (VPC overlaps)
+        requireBranchesToBeUpToDate: true
+        requiredConversationResolution: true
 
     - id: register
       name: Register it in the catalog
