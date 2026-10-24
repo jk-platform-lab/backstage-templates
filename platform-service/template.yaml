@@ -112,6 +112,9 @@ spec:
           - Network (VPC overlaps)
         requireBranchesToBeUpToDate: true
         requiredConversationResolution: true
+        customProperties:
+          environment: ${{ parameters.environment }}
+          managed-by: backstage
 
     - id: register
       name: Register it in the catalog
