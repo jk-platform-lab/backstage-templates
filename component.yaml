@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-templates
+  description: Software templates for jk-platform-lab, with a troubleshooting guide
+  annotations:
+    github.com/project-slug: jk-platform-lab/backstage-templates
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - backstage
+    - templates
+spec:
+  type: documentation
+  lifecycle: production
+  owner: user:JayKearney

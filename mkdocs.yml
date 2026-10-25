@@ -1,0 +1,9 @@
+site_name: Software templates
+site_description: Software templates for jk-platform-lab, and how to troubleshoot them
+
+nav:
+  - Home: index.md
+  - Troubleshooting: troubleshooting.md
+
+plugins:
+  - techdocs-core
